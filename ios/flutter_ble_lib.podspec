@@ -18,6 +18,6 @@ A new flutter plugin project.
   s.swift_versions = ['4.0', '4.2', '5.0']
   s.dependency 'MultiplatformBleAdapter', '~> 0.1.9'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '8.0'
 end
 
