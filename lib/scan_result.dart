@@ -38,7 +38,7 @@ class ScanResult {
 
 
   factory ScanResult.fromJson(
-    Map<String, dynamic?> json, 
+    Map<String, dynamic> json, 
     ManagerForPeripheral manager
   ) {
     assert(json[_ScanResultMetadata.rssi] is int);
@@ -47,7 +47,7 @@ class ScanResult {
       json[_ScanResultMetadata.rssi],
       AdvertisementData._fromJson(json),
       isConnectable: json[_ScanResultMetadata.isConnectable],
-      overflowServiceUuids: json[_ScanResultMetadata.overflowServiceUuids]
+      overflowServiceUuids: List<String>.from(json[_ScanResultMetadata.overflowServiceUuids] ?? []),
     );
   }
 }
