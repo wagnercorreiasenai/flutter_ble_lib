@@ -79,9 +79,17 @@ class Peripheral {
   /// Must be done prior to any other operation concerning those.
   ///
   /// Optional [transactionId] could be used to cancel operation.
-  Future<void> discoverAllServicesAndCharacteristics({String? transactionId}) =>
+  Future<void> discoverAllServicesAndCharacteristics({
+    Iterable<String>? serviceUuids,
+    Iterable<String>? characteristicUuids,
+    String? transactionId,
+  }) =>
       _manager.discoverAllServicesAndCharacteristics(
-          this, transactionId ?? TransactionIdGenerator.getNextId());
+        this,
+        serviceUuids,
+        characteristicUuids,
+        transactionId ?? TransactionIdGenerator.getNextId(),
+      );
 
   /// Returns a list of [Service]s of this peripheral.
   ///

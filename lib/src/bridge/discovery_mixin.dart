@@ -2,11 +2,17 @@ part of _internal;
 
 mixin DiscoveryMixin on FlutterBLE {
   Future<void> discoverAllServicesAndCharacteristics(
-      Peripheral peripheral, String transactionId) async {
+    Peripheral peripheral,
+    Iterable<String>? serviceUuids,
+    Iterable<String>? characteristicUuids,
+    String transactionId,
+  ) async {
     await _methodChannel.invokeMethod(
       MethodName.discoverAllServicesAndCharacteristics,
       <String, dynamic>{
         ArgumentName.deviceIdentifier: peripheral.identifier,
+        ArgumentName.serviceUuids: serviceUuids,
+        ArgumentName.characteristicUuids: characteristicUuids,
         ArgumentName.transactionId: transactionId,
       },
     ).catchError((errorJson) =>
