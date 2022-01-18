@@ -281,6 +281,8 @@
 
 - (void)discoverAllServicesAndCharacteristicsForDevice:(FlutterMethodCall *)call result:(FlutterResult)result {
     [_adapter discoverAllServicesAndCharacteristicsForDevice:call.arguments[ARGUMENT_KEY_DEVICE_IDENTIFIER]
+                                               serviceUuids:[ArgumentHandler stringArrayOrNil:call.arguments[ARGUMENT_KEY_SERVICE_UUIDS]]
+                                               characteristicUuids:[ArgumentHandler stringArrayOrNil:call.arguments[ARGUMENT_KEY_CHARACTERISTIC_UUIDS]]
                                                transactionId:[ArgumentHandler stringOrNil:call.arguments[ARGUMENT_KEY_TRANSACTION_ID]]
                                                      resolve:result
                                                       reject:[self rejectForFlutterResult:result]];
