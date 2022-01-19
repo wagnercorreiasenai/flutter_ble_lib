@@ -18,6 +18,7 @@ extern NSString * const ARGUMENT_KEY_LOG_LEVEL;
 extern NSString * const ARGUMENT_KEY_SERVICE_UUID;
 extern NSString * const ARGUMENT_KEY_SERVICE_ID;
 extern NSString * const ARGUMENT_KEY_CHARACTERISTIC_UUID;
+extern NSString * const ARGUMENT_KEY_CHARACTERISTIC_UUIDS;
 extern NSString * const ARGUMENT_KEY_CHARACTERISTIC_IDENTIFIER;
 extern NSString * const ARGUMENT_KEY_VALUE;
 extern NSString * const ARGUMENT_KEY_WITH_RESPONSE;

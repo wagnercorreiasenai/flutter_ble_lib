@@ -18,6 +18,7 @@ NSString * const ARGUMENT_KEY_LOG_LEVEL = @"logLevel";
 NSString * const ARGUMENT_KEY_SERVICE_UUID = @"serviceUuid";
 NSString * const ARGUMENT_KEY_SERVICE_ID = @"serviceId";
 NSString * const ARGUMENT_KEY_CHARACTERISTIC_UUID = @"characteristicUuid";
+NSString * const ARGUMENT_KEY_CHARACTERISTIC_UUIDS = @"characteristicUuids";
 NSString * const ARGUMENT_KEY_CHARACTERISTIC_IDENTIFIER = @"characteristicIdentifier";
 NSString * const ARGUMENT_KEY_VALUE = @"value";
 NSString * const ARGUMENT_KEY_WITH_RESPONSE = @"withResponse";

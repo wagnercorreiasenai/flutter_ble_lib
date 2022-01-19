@@ -25,7 +25,11 @@ abstract class ManagerForPeripheral {
   );
 
   Future<void> discoverAllServicesAndCharacteristics(
-      Peripheral peripheral, String transactionId);
+    Peripheral peripheral,
+    String? serviceUuid,
+    Iterable<String>? characteristicUuids,
+    String transactionId,
+  );
 
   Future<List<Service>> services(Peripheral peripheral);
 
