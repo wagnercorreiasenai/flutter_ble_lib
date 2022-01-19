@@ -166,13 +166,13 @@ class InternalBleManager
   @override
   Future<void> discoverAllServicesAndCharacteristics(
     Peripheral peripheral,
-    Iterable<String>? serviceUuids,
+    String? serviceUuid,
     Iterable<String>? characteristicUuids,
     String transactionId,
   ) =>
       _bleLib.discoverAllServicesAndCharacteristics(
         peripheral,
-        serviceUuids,
+        serviceUuid,
         characteristicUuids,
         transactionId,
       );

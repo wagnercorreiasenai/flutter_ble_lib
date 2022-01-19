@@ -80,13 +80,13 @@ class Peripheral {
   ///
   /// Optional [transactionId] could be used to cancel operation.
   Future<void> discoverAllServicesAndCharacteristics({
-    Iterable<String>? serviceUuids,
+    String? serviceUuid,
     Iterable<String>? characteristicUuids,
     String? transactionId,
   }) =>
       _manager.discoverAllServicesAndCharacteristics(
         this,
-        serviceUuids,
+        serviceUuid,
         characteristicUuids,
         transactionId ?? TransactionIdGenerator.getNextId(),
       );
